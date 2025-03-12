@@ -1,5 +1,5 @@
 zc-sdk-version: "0.1"
-name: Cloudflared Web
+name: Cloudflared(持续更新)
 package: cloud.lazycat.app.cloudfalredweb
 version: 2025.2.1
 description: Cloudflare Tunnel 提供了一种安全的方式，可以将 Web
