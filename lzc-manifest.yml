@@ -16,9 +16,12 @@ application:
   kvm_accel: false
   usb_accel: false
   routes:
-    - /=http://cloudflaredweb:14333/
+    - /=http://cloudflaredweb.cloud.lazycat.app.cloudfalredweb.lzcapp:14333/
 services:
   cloudflaredweb:
+    network_mode: host
     image: docker.hlmirror.com/wisdomsky/cloudflared-web:2025.2.1
     binds:
       - /lzcapp/var/config:/config
+    environment:
+      - PROTOCOL=http2
