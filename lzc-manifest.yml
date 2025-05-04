@@ -1,7 +1,7 @@
 zc-sdk-version: "0.1"
 name: Cloudflared(持续更新)
 package: cloud.lazycat.app.cloudfalredweb
-version: 2025.4.0
+version: 2025.4.2
 description: Cloudflare Tunnel 提供了一种安全的方式，可以将 Web
   服务器安全地公开到互联网上，而无需打开防火墙端口和配置访问控制列表（ACL）。Cloudflare Tunnel 还确保请求在到达 Web 服务器之前通过
   Cloudflare 路由，因此您可以确保攻击流量会被 Cloudflare 的 WAF 和无限制的 DDoS 缓解功能阻止，并在启用了这些功能的情况下通过
@@ -20,7 +20,7 @@ application:
 services:
   cloudflaredweb:
     network_mode: host
-    image: docker.hlmirror.com/wisdomsky/cloudflared-web:2025.4.0
+    image: docker.1ms.run/wisdomsky/cloudflared-web:2025.4.2
     binds:
       - /lzcapp/var/config:/config
     environment:
