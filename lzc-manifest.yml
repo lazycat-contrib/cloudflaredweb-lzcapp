@@ -20,7 +20,7 @@ application:
 services:
   cloudflaredweb:
     network_mode: host
-    image: docker.1ms.run/wisdomsky/cloudflared-web:2025.5.0
+    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:8e7ec1099b16eacf
     binds:
       - /lzcapp/var/config:/config
     environment:
