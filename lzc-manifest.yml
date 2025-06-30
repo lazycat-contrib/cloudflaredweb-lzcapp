@@ -21,7 +21,7 @@ services:
   cloudflaredweb:
     network_mode: host
     # wisdomsky/cloudflared-web:2025.6.1
-    image: r registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:da14181b57e3455b
+    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:da14181b57e3455b
     binds:
       - /lzcapp/var/config:/config
     environment:
