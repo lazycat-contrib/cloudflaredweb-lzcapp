@@ -21,4 +21,4 @@ services:
         binds:
             - /lzcapp/var/config:/config
         environment:
-            - PROTOCOL=http2
+            - PROTOCOL={{.U.protocol}}

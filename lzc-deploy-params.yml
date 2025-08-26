@@ -1,0 +1,12 @@
+params:
+    - id: protocol
+      type: string
+      name: "protocol"
+      description: "the protocol you want to use,auto ,http2,quic"
+      default_value: "auto"
+
+locales:
+    zh:
+        protocol:
+            name: "协议"
+            description: "指定用于在 cloudflared 和 Cloudflare 全球网络之间建立连接的协议。可用值为 auto 、 http2 和 quic"
