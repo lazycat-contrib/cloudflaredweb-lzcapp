@@ -1,24 +1,32 @@
 zc-sdk-version: "0.1"
-name: Cloudflared(持续更新)
+name: Cloudflared
 package: cloud.lazycat.app.cloudfalredweb
-version: 2025.8.1
-description: Cloudflare Tunnel 提供了一种安全的方式，可以将 Web
-    服务器安全地公开到互联网上，而无需打开防火墙端口和配置访问控制列表（ACL）。Cloudflare Tunnel 还确保请求在到达 Web 服务器之前通过
-    Cloudflare 路由，因此您可以确保攻击流量会被 Cloudflare 的 WAF 和无限制的 DDoS 缓解功能阻止，并在启用了这些功能的情况下通过
-    Access 进行身份验证。
+version: 2025.9.0
+description:
 homepage: https://github.com/WisdomSky/Cloudflared-web
 author: WisdomSky
 application:
-    subdomain: cloudfalredweb
-    background_task: true
-    routes:
-        - /=http://host.lzcapp:14333/
+  subdomain: cloudfalredweb
+  background_task: true
+  routes:
+    - /=http://host.lzcapp:14333/
 services:
-    cloudflaredweb:
-        network_mode: host
-        # wisdomsky/cloudflared-web:2025.8.1
-        image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:f9d54060070d3828
-        binds:
-            - /lzcapp/var/config:/config
-        environment:
-            - PROTOCOL={{.U.protocol}}
+  cloudflaredweb:
+    network_mode: host
+    # wisdomsky/cloudflared-web:2025.9.0
+    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:8b8585ad7dcf9c17
+    binds:
+      - /lzcapp/var/config:/config
+    environment:
+      - PROTOCOL={{.U.protocol}}
+
+locales:
+  zh:
+    name: "Cloudflared"
+    description: "Cloudflare Tunnel 提供了一种安全的方式，可以将 Web服务器安全地公开到互联网上，而无需打开防火墙端口和配置访问控制列表（ACL）。Cloudflare Tunnel 还确保请求在到达 Web 服务器之前通过Cloudflare 路由，因此您可以确保攻击流量会被 Cloudflare 的 WAF 和无限制的 DDoS 缓解功能阻止，并在启用了这些功能的情况下通过Accss 进行身份验证。"
+  zh_CN:
+    name: "Cloudflared"
+    description: "Cloudflare Tunnel 提供了一种安全的方式，可以将 Web服务器安全地公开到互联网上，而无需打开防火墙端口和配置访问控制列表（ACL）。Cloudflare Tunnel 还确保请求在到达 Web 服务器之前通过Cloudflare 路由，因此您可以确保攻击流量会被 Cloudflare 的 WAF 和无限制的 DDoS 缓解功能阻止，并在启用了这些功能的情况下通过Accss 进行身份验证。"
+  en:
+    name: "Cloudflared"
+    description: "Cloudflare Tunnel client (formerly Argo Tunnel)"
