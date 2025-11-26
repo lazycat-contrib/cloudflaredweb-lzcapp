@@ -1,6 +1,6 @@
 name: Cloudflared
 package: cloud.lazycat.app.cloudfalredweb
-version: 2025.10.0
+version: 2025.11.1
 description:
 homepage: https://github.com/WisdomSky/Cloudflared-web
 author: WisdomSky
@@ -12,8 +12,8 @@ application:
 services:
   cloudflaredweb:
     network_mode: host
-    # wisdomsky/cloudflared-web:2025.10.0
-    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:0495f7020b2641f9
+    # wisdomsky/cloudflared-web:2025.11.1
+    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:7aa34bb82e1f6c59
     binds:
       - /lzcapp/var/config:/config
     environment:
