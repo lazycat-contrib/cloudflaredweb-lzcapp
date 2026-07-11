@@ -1,0 +1,44 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/cloudflaredweb.lpk
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: cloudflaredweb
+
+build:
+  run_buildscript: false
+
+images:
+  - id: cloudflaredweb
+    target: service
+    service: cloudflaredweb
+    source: wisdomsky/cloudflared-web
+    channel: stable
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    changelog_locales: [zh, en]
+    application:
+      language: zh
+      name: Cloudflared
+      source: https://github.com/WisdomSky/Cloudflared-web
+      source_author: WisdomSky
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Cloudflared
+    summary: Cloudflare Tunnel Web 管理客户端
