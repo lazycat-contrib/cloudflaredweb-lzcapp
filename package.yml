@@ -1,15 +1,13 @@
 package: cloud.lazycat.app.cloudfalredweb
-version: 2026.2.0
+version: 2026.7.0
 name: Cloudflared
 description: Cloudflare Tunnel Web 管理客户端
 min_os_version: 1.5.0
 homepage: https://github.com/WisdomSky/Cloudflared-web
 author: WisdomSky
-
 permissions:
   required:
     - net.internet
-
 locales:
   zh:
     name: Cloudflared
