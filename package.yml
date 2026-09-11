@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.cloudfalredweb
-version: 2026.8.3
+version: 2026.9.0
 name: Cloudflared
 description: Cloudflare Tunnel Web 管理客户端
 min_os_version: 1.5.0
