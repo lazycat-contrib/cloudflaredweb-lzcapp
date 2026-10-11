@@ -1,4 +1,5 @@
 package: cloud.lazycat.app.cloudfalredweb
+license: GPL-2.0
 version: 2026.10.0
 name: Cloudflared
 description: Cloudflare Tunnel Web 管理客户端
