@@ -7,8 +7,8 @@ services:
   cloudflaredweb:
     network_mode: host
     # wisdomsky/cloudflared-web:2026.2.0
-    # upstream: wisdomsky/cloudflared-web:2026.11.0
-    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:d2bfc4de9c0e35dd
+    # upstream: wisdomsky/cloudflared-web:2026.11.1
+    image: registry.lazycat.cloud/czyt/wisdomsky/cloudflared-web:2549d5c0e473d57c
     binds:
       - /lzcapp/var/config:/config
     environment:
